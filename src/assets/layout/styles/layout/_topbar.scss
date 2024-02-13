@@ -18,7 +18,7 @@
         color: var(--surface-900);
         font-size: 1.5rem;
         font-weight: 500;
-        width: 300px;
+        width: 243px;
         border-radius: 12px;
 
         img {
@@ -62,9 +62,6 @@
         }
     }
 
-    .layout-menu-button {
-        margin-left: 2rem;
-    }
 
     .layout-topbar-menu-button {
         display: none;
@@ -96,7 +93,6 @@
         }
 
         .layout-menu-button {
-            margin-left: 0;
             order: 1;
         }
 

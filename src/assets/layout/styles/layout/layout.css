@@ -99,7 +99,6 @@ a {
   color: var(--surface-900);
   font-size: 1.5rem;
   font-weight: 500;
-  width: 243px;
   border-radius: 12px;
 }
 .layout-topbar .layout-topbar-logo img {
@@ -163,7 +162,7 @@ a {
     justify-content: space-between;
   }
   .layout-topbar .layout-topbar-logo {
-    width: auto;
+    width: auto !important;
     order: 2;
   }
   .layout-topbar .layout-menu-button {

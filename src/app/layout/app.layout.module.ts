@@ -17,6 +17,8 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
+import { AppsComponent } from './shared-component/apps/apps.component';
+import { ProfileComponent } from './shared-component/profile/profile.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +41,12 @@ import { AppLayoutComponent } from "./app.layout.component";
         InputSwitchModule,
         RippleModule,
         RouterModule,
-        AppConfigModule
+        AppConfigModule,
+
+
+        //Component
+        ProfileComponent,
+        AppsComponent
     ],
     exports: [AppLayoutComponent]
 })

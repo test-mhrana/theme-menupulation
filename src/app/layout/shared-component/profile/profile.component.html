@@ -1,4 +1,33 @@
-<button class="p-link layout-topbar-button">
+<button class="p-link layout-topbar-button" (click)="op.toggle($event)">
     <i class="pi pi-user"></i>
     <span>Profile</span>
 </button>
+
+<p-overlayPanel #op [showCloseIcon]="true" [style]="{width:'300px'}">
+    <div class="flex flex-wrap p-2 align-items-center gap-3">
+        <img class="w-4rem shadow-2 flex-shrink-0 border-round"
+             src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="{item.name}"/>
+        <div class="flex-1 flex flex-column gap-2">
+            <span class="font-bold">bamboo-watch.jpg</span>
+            <div class="flex align-items-center gap-2">
+                <i class="pi pi-tag text-sm"></i>
+                <span>bamboo-watch.jpg</span>
+            </div>
+        </div>
+        <span class="font-bold text-900">{{ '$33' }}</span>
+    </div>
+    <hr/>
+    <div class="flex">
+        <p-listbox [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name"
+                   [listStyle]="{ 'max-height': '250px' }" [style]="{ width: '265px' }"
+                   [listStyle]="{'max-height': '220px'}" (onClick)="clickOption($event)">
+            <ng-template let-country pTemplate="item">
+                <div class="flex align-items-center gap-2">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                         [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px"/>
+                    <div>{{ country.name }}</div>
+                </div>
+            </ng-template>
+        </p-listbox>
+    </div>
+</p-overlayPanel>

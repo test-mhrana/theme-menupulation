@@ -14,17 +14,15 @@
                 <span>bamboo-watch.jpg</span>
             </div>
         </div>
-        <span class="font-bold text-900">{{ '$33' }}</span>
     </div>
     <hr/>
     <div class="flex">
-        <p-listbox [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name"
+        <p-listbox [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" optionValue="code"
                    [listStyle]="{ 'max-height': '250px' }" [style]="{ width: '265px' }"
                    [listStyle]="{'max-height': '220px'}" (onClick)="clickOption($event)">
             <ng-template let-country pTemplate="item">
                 <div class="flex align-items-center gap-2">
-                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
-                         [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px"/>
+                    <i class="pi pi-cog"></i>
                     <div>{{ country.name }}</div>
                 </div>
             </ng-template>

@@ -36,6 +36,7 @@ export class ProfileComponent implements OnInit {
     }
 
     clickOption(event) {
-        console.warn(event)
+        console.warn(event.option.code);
+        this.selectedCountry = null;
     }
 }

@@ -17,9 +17,9 @@
     </div>
     <hr/>
     <div class="flex">
-        <p-listbox [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" optionValue="code"
-                   [listStyle]="{ 'max-height': '250px' }" [style]="{ width: '265px' }"
-                   [listStyle]="{'max-height': '220px'}" (onClick)="clickOption($event)">
+        <p-listbox #myListbox [options]="countries" optionLabel="name" optionValue="code"
+                   [style]="{ width: '265px' }" [multiple]="false"
+                   [listStyle]="{'max-height': '220px'}" (onChange)="clickOption($event)">
             <ng-template let-country pTemplate="item">
                 <div class="flex align-items-center gap-2">
                     <i class="pi pi-cog"></i>
